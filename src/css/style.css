@@ -1,0 +1,28 @@
+#health{
+    border: 2px solid grey;
+    width: 300px;
+    height: 25px;
+}
+#health::-webkit-progress-bar {
+    background-color: rgb(0, 0, 0);
+}
+#health::-webkit-progress-value {
+    background-color: #ff0000;
+}
+#mana{
+    border: 2px solid grey;
+    width: 300px;
+    height: 25px;
+}
+#mana::-webkit-progress-bar {
+    background-color: rgb(0, 0, 0);
+}
+#mana::-webkit-progress-value {
+    background-color: #00e1ff;
+}
+button{
+    height: 20px;
+}
+input{
+    margin-top: 0px;
+}
