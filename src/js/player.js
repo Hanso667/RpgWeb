@@ -19,12 +19,12 @@ class player {
     damage(amount) {
         if (this.health - amount <= this.mHealth) {
             this.health -= amount;
-        } else {
+        } else if (this.health - amount >this.mHealth) {
             this.health = this.mHealth;
+        } else {
+            this.health = 0
         }
-        if(this.health - amount <0){
-            this.health = 0;
-        }
+
     }
 
     setMana(amount) {
@@ -46,11 +46,10 @@ class player {
     useMana(amount) {
         if (this.mana - amount <= this.mMana) {
             this.mana -= amount;
-        } else {
+        } else if (this.mana - amount >this.mMana) {
             this.mana = this.mMana;
-        }
-        if(this.mana - amount <0){
-            this.mana = 0;
+        } else {
+            this.mana = 0
         }
     }
 
@@ -65,12 +64,16 @@ user.setSpi(10);
 user.setmMana();
 user.setMana(user.mMana);
 document.getElementById("mana").value = user.mana / user.mMana * 100;
+document.getElementById("lblHealth").textContent = user.health+"/"+user.mHealth
+document.getElementById("lblMana").textContent = user.mana+"/"+user.mMana
 
 function btnDamage() {
     user.damage(document.getElementById("inHealth").value);
     document.getElementById("health").value = user.health / user.mHealth * 100;
+    document.getElementById("lblHealth").textContent = user.health+"/"+user.mHealth
 }
 function btnUse() {
     user.useMana(document.getElementById("inMana").value);
     document.getElementById("mana").value = user.mana / user.mMana * 100;
+    document.getElementById("lblMana").textContent = user.mana+"/"+user.mMana
 }
