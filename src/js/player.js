@@ -17,11 +17,14 @@ class player {
     }
 
     damage(amount) {
-        if (this.health - amount <= this.mHealth) {
+        if (this.health - amount <= this.mHealth && this.health - amount > 0) {
             this.health -= amount;
+            console.log("<=")
         } else if (this.health - amount >this.mHealth) {
             this.health = this.mHealth;
+            console.log(">")
         } else {
+            console.log("else")
             this.health = 0
         }
 
@@ -44,7 +47,7 @@ class player {
     }
 
     useMana(amount) {
-        if (this.mana - amount <= this.mMana) {
+        if (this.mana - amount <= this.mMana  && this.mana - amount > 0) {
             this.mana -= amount;
         } else if (this.mana - amount >this.mMana) {
             this.mana = this.mMana;
@@ -59,11 +62,9 @@ const user = new player();
 user.setVit(10);
 user.setmHealth();
 user.setHealth(user.mHealth);
-document.getElementById("health").value = user.health / user.mHealth * 100;
 user.setSpi(10);
 user.setmMana();
 user.setMana(user.mMana);
-document.getElementById("mana").value = user.mana / user.mMana * 100;
 document.getElementById("lblHealth").textContent = user.health+"/"+user.mHealth
 document.getElementById("lblMana").textContent = user.mana+"/"+user.mMana
 
