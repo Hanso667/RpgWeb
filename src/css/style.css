@@ -19,8 +19,9 @@ body {
     display: flex;
     width: 40%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 5vh;
 }
 
 .navbut {
@@ -28,7 +29,7 @@ body {
     font-weight: bolder;
     background-color: #7c3737;
     color: #252323;
-    height: 3vh;
+    height: 4vh;
     width: 25vh;
     border-radius: 1vh;
     border: 0.5vh solid #252323;
@@ -56,9 +57,9 @@ body {
     border-top: 0.6vh solid #252323;
 }
 
-.health-mana {
+.main-container {
     height: 40vh;
-    width: 40vh;
+    width: 65vh;
     border-radius: 3vh;
     border: 0.5vh solid #7c3737;
     box-shadow: 0 0 0 0.3vh #252323;
@@ -106,8 +107,8 @@ body {
 
 #health {
     border: 2px solid rgb(255, 255, 255);
-    width: 300px;
-    height: 25px;
+    width: 50vh;
+    height: 4vh;
     border-radius: 5vh;
     border: 0.5vh solid #252323;
     box-shadow: 0 0 0 0.3vh #7c3737;
@@ -125,8 +126,8 @@ body {
 
 #mana {
     border: 2px solid rgb(255, 255, 255);
-    width: 300px;
-    height: 25px;
+    width: 50vh;
+    height: 4vh;
     border-radius: 5vh;
     border: 0.5vh solid #252323;
     box-shadow: 0 0 0 0.3vh #7c3737;
@@ -154,16 +155,37 @@ body {
     border-top: 0.6vh solid #252323;
 }
 
-.settings {
-    height: 40vh;
-    width: 40vh;
-    border-radius: 3vh;
-    border: 0.5vh solid #7c3737;
-    box-shadow: 0 0 0 0.3vh #252323;
-    background-color: #252323;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media only screen and (max-width: 800px) {
+    .main-container {
+        height: 35vh;
+        width: 55vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        height: 35vh;
+        width: 40vh;
+    }
+    #health{
+        width: 30vh;
+    }
+    #mana{
+        width: 30vh;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .main-container {
+        height: 35vh;
+        width: 30vh;
+    }
+    #health{
+        width: 25vh;
+    }
+    #mana{
+        width: 25vh;
+    }
+    .input-div input{
+        width: 15vh;
+    }
 }
