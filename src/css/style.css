@@ -1,61 +1,169 @@
-#health{
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient(#343131, #252323);
+    z-index: 1;
+    border-bottom: 0.6vh solid #7c3737
+}
+
+.navigation {
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbut {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    background-color: #7c3737;
+    color: #252323;
+    height: 3vh;
+    width: 25vh;
+    border-radius: 1vh;
+    border: 0.5vh solid #252323;
+    box-shadow: 0 0 0 0.3vh #7c3737;
+}
+
+.navbut:hover {
+    cursor: pointer;
+}
+
+.navbut:active {
+    border: 0.5vh solid #7c3737;
+    box-shadow: 0 0 0 0.3vh #252323;
+}
+
+.main-stats {
+    width: 100%;
+    height: 89vh;
+    background-image: radial-gradient(#A04747, #7c3737);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    border-top: 0.6vh solid #252323;
+}
+
+.health-mana {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 3vh;
+    border: 0.5vh solid #7c3737;
+    box-shadow: 0 0 0 0.3vh #252323;
+    background-color: #252323;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-div {
+    gap: 1vh;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-div button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    background-color: #7c3737;
+    border-radius: 0.3vh;
+    border: 0.5vh solid #252323;
+    box-shadow: 0 0 0 0.3vh #7c3737;
+    color: #252323;
+}
+
+.input-div button:hover {
+    cursor: pointer;
+}
+
+.input-div button:active {
+    border: 0.5vh solid #7c3737;
+    box-shadow: 0 0 0 0.3vh #252323;
+}
+
+.input-div input {
+    border-radius: 0.5vh;
+    text-align: center;
+    border: 0.3vh solid #7c3737;
+}
+
+#health {
     border: 2px solid rgb(255, 255, 255);
     width: 300px;
     height: 25px;
     border-radius: 5vh;
+    border: 0.5vh solid #252323;
+    box-shadow: 0 0 0 0.3vh #7c3737;
 }
+
 #health::-webkit-progress-bar {
     background-color: rgb(0, 0, 0);
     border-radius: 5vh;
 }
+
 #health::-webkit-progress-value {
-    background-color: #ff0000;
+    background-image: linear-gradient(0.25turn, #800101, #ff0000);
     border-radius: 5vh;
 }
-#mana{
+
+#mana {
     border: 2px solid rgb(255, 255, 255);
     width: 300px;
     height: 25px;
     border-radius: 5vh;
+    border: 0.5vh solid #252323;
+    box-shadow: 0 0 0 0.3vh #7c3737;
 }
+
 #mana::-webkit-progress-bar {
     background-color: rgb(0, 0, 0);
     border-radius: 5vh;
 }
+
 #mana::-webkit-progress-value {
-    background-color: #00e1ff;
+    background-image: linear-gradient(0.25turn, #026370, #00e1ff);
     border-radius: 5vh;
 }
-button{
-    height: 20px;
-}
-input{
-    margin-top: 3px;
-    margin-left: 25px;
-}
-.fundo{
-    background-color: rgb(16, 0, 20);
-    display: flex;
-    align-items: center;
+
+.main-settings {
+    width: 100%;
+    height: 89vh;
+    background-image: radial-gradient(#A04747, #7c3737);
+    display: none;
     flex-direction: column;
     justify-content: center;
-    width: 50vh;
-    height: 55vh;
-    position: relative;
-    left: 80vh;
-    top: 25vh;
-    border-radius: 5vh;
-    border: solid white 0.2vh;
-}
-.fundo2{
-    display: center;
     align-items: center;
-    background-image: linear-gradient(45deg,rgb(0, 73, 141),rgb(0, 86, 199));
-    width: 100%;
-    height: 100vh;
+    z-index: 0;
+    border-top: 0.6vh solid #252323;
 }
-.fundo2 label{
+
+.settings {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 3vh;
+    border: 0.5vh solid #7c3737;
+    box-shadow: 0 0 0 0.3vh #252323;
+    background-color: #252323;
     color: white;
-    margin-top: 5px;
-    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

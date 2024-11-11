@@ -10,25 +10,55 @@
 </head>
 
 <body>
-    <div class="fundo2">
-<div class="fundo">
-    <label id="lblHealth" for="Health"></label><br>
-    <progress id="health" value="100" max="100"></progress>
 
-        <div class="input-div">
-            <input id="inHealth" type="number"><button onclick="btnDamage()">ENTER</button>
-        </div>
+    <header class="header-content">
+        <nav class="navigation">
+            <button class="navbut" onclick="stats()">Stats</button>
+            <button class="navbut" onclick="settings()">Settings</button>
+            <button class="navbut" onclick=""></button>
+            </nav>
+    </header>
 
-    <label id="lblMana" for="mana"></label><br>
-    <progress id="mana" value="100" max="100"></progress>
+        <main id="stats" class="main-stats">
 
-        <div class="input-div">
-            <input id="inMana" type="number"><button onclick="btnUse()">ENTER</button>
-        </div>
+            <container class="health-mana">
+            
+            <label id="lblHealth" for="Health"></label><br>
+            <progress id="health" value="100" max="100"></progress>
 
-    </div>
-</div>
-<script src="src/js/player.js"></script>
+                <div class="input-div">
+                    <input id="inHealth" type="number"><button onclick="btnDamage()">ENTER</button>
+                </div>
+
+            <label id="lblMana" for="mana"></label><br>
+            <progress id="mana" value="100" max="100"></progress>
+
+                <div class="input-div">
+                    <input id="inMana" type="number"><button onclick="btnUse()">ENTER</button>
+                </div>
+
+        </container>
+
+    </main>
+
+    <main id="settings" class="main-settings">
+        <container class="settings">
+
+                <label for="inVit">Vitalidade</label><br>
+                <div class="input-div">
+                    <input id="inVit" type="number" max="10" value="1"><button onclick="user.setVit()">ENTER</button>
+                </div>
+
+                <label for="inSpi">Espirito</label><br>
+                <div class="input-div">
+                    <input id="inSpi" type="number" max="10" value="1"><button onclick="user.setSpi()">ENTER</button>
+                </div>
+
+        </container>
+
+    </main>
+
+    <script src="src/js/player.js"></script>
 
 </body>
 
