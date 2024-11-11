@@ -10,28 +10,32 @@ class player {
 
     setVit() {
         var input = document.getElementById("inVit").value;
-        if(input>=0 && input<10){
-            this.vit = input;
-        } else if (input<=0){
-            this.vit = 1;
-        } else if (input>10){
-            this.vit = 10;
+        if (input >= 0 && input < 10) {
+            input = input;
+        } else if (input < 0) {
+            input = 1;
+        } else if (input > 10) {
+            input = 10;
         }
+        this.vit = input
         this.mHealth = this.vit * 50;
-        user.setHealth(user.mHealth);
-        document.getElementById("health").value = user.health / user.mHealth * 100;
-        document.getElementById("lblHealth").textContent = user.health+"/"+user.mHealth
+        this.setHealth(this.mHealth);
+        if (isFinite(this.health / this.mHealth)) {
+            document.getElementById("health").value = this.health / this.mHealth * 100;
+        } else {
+            this.health = 50;
+            this.mHealth = 50;
+            document.getElementById("health").value = this.health / this.mHealth * 100;
+        }
+        document.getElementById("lblHealth").textContent = this.health + "/" + this.mHealth
     }
 
     damage(amount) {
         if (this.health - amount <= this.mHealth && this.health - amount > 0) {
             this.health -= amount;
-            console.log("<=")
-        } else if (this.health - amount >this.mHealth) {
+        } else if (this.health - amount > this.mHealth) {
             this.health = this.mHealth;
-            console.log(">")
         } else {
-            console.log("else")
             this.health = 0
         }
 
@@ -47,23 +51,30 @@ class player {
 
     setSpi() {
         var input = document.getElementById("inSpi").value;
-        if(input>=0 && input<10){
-            this.spi = input;
-        } else if (input<=0){
-            this.spi = 1;
-        } else if (input>10){
-            this.spi = 10;
+        if (input >= 0 && input < 10) {
+            input = input;
+        } else if (input <= 0) {
+            input = 1;
+        } else if (input > 10) {
+            input = 10;
         }
+        this.spi = input;
         this.mMana = this.spi * 25;
-        user.setMana(user.mMana);
-        document.getElementById("mana").value = user.mana / user.mMana * 100;
-        document.getElementById("lblMana").textContent = user.mana+"/"+user.mMana
+        this.setMana(this.mMana);
+        if (isFinite(this.mana / this.mMana)) {
+            document.getElementById("mana").value = this.mana / this.mMana * 100;
+        } else {
+            this.mana = 25;
+            this.mMana = 25;
+            document.getElementById("mana").value = this.mana / this.mMana * 100;
+        }
+        document.getElementById("lblMana").textContent = this.mana + "/" + this.mMana
     }
 
     useMana(amount) {
-        if (this.mana - amount <= this.mMana  && this.mana - amount > 0) {
+        if (this.mana - amount <= this.mMana && this.mana - amount > 0) {
             this.mana -= amount;
-        } else if (this.mana - amount >this.mMana) {
+        } else if (this.mana - amount > this.mMana) {
             this.mana = this.mMana;
         } else {
             this.mana = 0
@@ -78,20 +89,20 @@ user.setSpi();
 function btnDamage() {
     user.damage(document.getElementById("inHealth").value);
     document.getElementById("health").value = user.health / user.mHealth * 100;
-    document.getElementById("lblHealth").textContent = user.health+"/"+user.mHealth
+    document.getElementById("lblHealth").textContent = user.health + "/" + user.mHealth
 }
 function btnUse() {
     user.useMana(document.getElementById("inMana").value);
     document.getElementById("mana").value = user.mana / user.mMana * 100;
-    document.getElementById("lblMana").textContent = user.mana+"/"+user.mMana
+    document.getElementById("lblMana").textContent = user.mana + "/" + user.mMana
 }
 
-function stats(){
+function stats() {
     document.getElementById("stats").style.display = "flex";
     document.getElementById("settings").style.display = "none";
 
 }
-function settings(){
+function settings() {
     document.getElementById("stats").style.display = "none";
     document.getElementById("settings").style.display = "flex";
 
