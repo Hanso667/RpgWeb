@@ -1,9 +1,21 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
+    background-image: radial-gradient(#A04747, #7c3737);
+}
+
+@keyframes entradahead {
+    0% {
+        transform: translateY(-150%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 .header-content {
+    animation: 1s ease-out 0s 1 entradahead;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,8 +24,10 @@ body {
     height: 10vh;
     background-image: linear-gradient(#343131, #252323);
     z-index: 1;
-    border-bottom: 0.6vh solid #7c3737
+    border-bottom: 0.6vh solid #7c3737;
+    box-shadow: 0px 4px 0vh #252323;
 }
+
 
 .navigation {
     display: flex;
@@ -30,7 +44,7 @@ body {
     background-color: #7c3737;
     color: #252323;
     height: 4vh;
-    width: 25vh;
+    width: 30vh;
     border-radius: 1vh;
     border: 0.5vh solid #252323;
     box-shadow: 0 0 0 0.3vh #7c3737;
@@ -44,20 +58,28 @@ body {
     border: 0.5vh solid #7c3737;
     box-shadow: 0 0 0 0.3vh #252323;
 }
-
 .main-stats {
     width: 100%;
     height: 89vh;
-    background-image: radial-gradient(#A04747, #7c3737);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 0;
-    border-top: 0.6vh solid #252323;
+}
+
+@keyframes entrada {
+    0% {
+        transform: scale(0%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
 }
 
 .main-container {
+    animation: 1s ease-out 0s 1 entrada;
     height: 40vh;
     width: 65vh;
     border-radius: 3vh;
@@ -146,7 +168,6 @@ body {
 .main-settings {
     width: 100%;
     height: 89vh;
-    background-image: radial-gradient(#A04747, #7c3737);
     display: none;
     flex-direction: column;
     justify-content: center;
