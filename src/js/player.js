@@ -1,3 +1,4 @@
+
 class player {
 
     setHealth(amount) {
@@ -81,16 +82,19 @@ class player {
         }
     }
 
-
 }
+
 const user = new player();
+
 user.setVit();
 user.setSpi();
+
 function btnDamage() {
     user.damage(document.getElementById("inHealth").value);
     document.getElementById("health").value = user.health / user.mHealth * 100;
     document.getElementById("lblHealth").textContent = user.health + "/" + user.mHealth
 }
+
 function btnUse() {
     user.useMana(document.getElementById("inMana").value);
     document.getElementById("mana").value = user.mana / user.mMana * 100;
@@ -102,8 +106,24 @@ function stats() {
     document.getElementById("settings").style.display = "none";
 
 }
+
 function settings() {
     document.getElementById("stats").style.display = "none";
     document.getElementById("settings").style.display = "flex";
 
+}
+
+function setNome() {
+        document.getElementById("titulo").textContent = document.getElementById("nome").value
+        document.getElementById("nome").value = "";
+}
+function reveal(){
+    if(document.getElementById("nome").style.display === "none"){
+
+        document.getElementById("nome").style.display = "flex"
+        
+    }else if (document.getElementById("nome").style.display == "flex"){
+        
+        document.getElementById("nome").style.display = "none"
+    }
 }

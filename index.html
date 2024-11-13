@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="titulo">[Nome]</title>
 </head>
 
 <body>
@@ -22,7 +22,10 @@
         <main id="stats" class="main-stats">
 
             <container class="main-container">
-            
+            <div class="input-div">
+            <button id="hide-show" onclick="reveal()"></button>
+            <input type="text" id="nome" onkeypress="Javascript: if (event.keyCode==13) setNome();" style="display: none;" ></input>
+            </div>
             <label class="lbl" id="lblHealth" for="Health"></label>
             <progress id="health" value="100" max="100"></progress>
 
