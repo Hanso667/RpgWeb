@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">[Nome]</title>
+</head>
+
+<body>
+
+    <header class="header-content">
+        <nav class="navigation">
+            <button class="navbut" onclick="stats()">Stats</button>
+            <button class="navbut" onclick="settings()">Settings</button>
+            <a href="Traits/index.html"><button class="navbut">Traits</button></a>
+            </nav>
+    </header>
+
+        <main id="stats" class="main-stats">
+
+            <container class="main-container">
+            <div class="input-div">
+            <button id="hide-show" onclick="reveal()"></button>
+            <input type="text" id="nome" onkeypress="Javascript: if (event.keyCode==13) setNome();" style="display: none;" ></input>
+            </div>
+            <label class="lbl" id="lblHealth" for="Health"></label>
+            <progress id="health" value="100" max="100"></progress>
+
+                <div class="input-div">
+                    <input id="inHealth" type="number"><button onclick="btnDamage()">ENTER</button>
+                </div>
+
+            <label class="lbl" id="lblMana" for="mana"></label>
+            <progress id="mana" value="100" max="100"></progress>
+
+                <div class="input-div">
+                    <input id="inMana" type="number"><button onclick="btnUse()">ENTER</button>
+                </div>
+
+        </container>
+
+    </main>
+
+    <main id="settings" class="main-settings">
+        <container class="main-container" >
+
+                <label for="inVit">Vitalidade</label><br>
+                <div class="input-div">
+                    <input id="inVit" type="number" max="10" value="1"><button onclick="user.setVit()">ENTER</button>
+                </div>
+
+                <label for="inSpi">Espirito</label><br>
+                <div class="input-div">
+                    <input id="inSpi" type="number" max="10" value="1"><button onclick="user.setSpi()">ENTER</button>
+                </div>
+
+        </container>
+
+    </main>
+
+    <script src="src/js/player.js"></script>
+
+</body>
+
+</html>
