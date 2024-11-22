@@ -16,7 +16,91 @@ body{
     background-image: radial-gradient(#A04747, #7c3737);
     border: 3px solid rgb(19, 19, 19);
     box-shadow: 0 0 0 4px #7c3737;
-    height: 70vh;
+    height: 50vh;
     width: 70vh;
     border-radius: 4vh;
+}
+.slot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgb(20, 20, 20),rgb(14, 14, 14));
+    height: 30vh;
+    width: 50vh;
+    border: 3px solid #7c3737 ;
+    border-radius: 0px 0px 40px 40px;
+    box-shadow: 0 0 0 3px rgb(19, 19, 19);
+    margin-bottom: 2vh;
+}
+.container button{
+    position: absolute;
+    bottom: 38vh;
+    color: white;
+    background-image: radial-gradient(#A04747,#7c3737);
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
+}
+.container button:hover{
+    cursor: pointer;
+}
+.container button:active{
+    transform: scale(1.1);
+}
+@keyframes entrada{
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(150%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+.comum{
+    animation: 1s ease-out 0s 1 entrada;
+    text-align: center;
+    width: 20vh;
+    background-image: radial-gradient(rgb(138, 138, 138),rgb(87, 87, 87));
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
+}
+.incomum{
+    animation: 1s ease-out 0s 1 entrada;
+    text-align: center;
+    width: 20vh;
+    background-image: radial-gradient(rgb(109, 255, 141),rgb(11, 201, 52));
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
+}
+.raro{
+    animation: 1s ease-out 0s 1 entrada;
+    text-align: center;
+    width: 20vh;
+    background-image: radial-gradient(rgb(255, 244, 88),rgb(255, 208, 0));
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
+}
+.lendario{
+    animation: 1s ease-out 0s 1 entrada;
+    text-align: center;
+    width: 20vh;
+    background-image: radial-gradient(rgb(74, 255, 255),rgb(0, 204, 255));
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
+}
+.unico{
+    animation: 1s ease-out 0s 1 entrada;
+    text-align: center;
+    width: 20vh;
+    background-image: radial-gradient(rgb(253, 67, 67),rgb(255, 0, 0));
+    border-radius: 1vh;
+    border: 3px solid rgb(19, 19, 19) ;
+    box-shadow: 0 0 0 2px #7c3737;
 }
