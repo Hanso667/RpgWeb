@@ -11,7 +11,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-image: radial-gradient(#A04747, #7c3737);
     border: 3px solid rgb(19, 19, 19);
@@ -33,9 +33,11 @@ body{
     box-shadow: 0 0 0 3px rgb(19, 19, 19);
     margin-bottom: 2vh;
 }
+.slot button{
+    margin-top: 2vh;
+}
+
 .container button{
-    position: absolute;
-    bottom: 38vh;
     color: white;
     background-image: radial-gradient(#A04747,#7c3737);
     border-radius: 1vh;
@@ -48,11 +50,7 @@ body{
 .container button:active{
     transform: scale(1.1);
 }
-#voltar{
-    position: absolute;
-    bottom: 27vh;
-    left: 102vh;
-}
+
 @keyframes entrada{
     0%{
         transform: scale(100%);

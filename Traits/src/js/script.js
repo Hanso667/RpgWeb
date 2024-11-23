@@ -80,6 +80,7 @@ function rolar() {
     one = sortear()
     two = sortear()
     three = sortear()
+
     const timeout1 = setTimeout(first, 1000);
     const timeout2 = setTimeout(second, 2000);
     const timeout3 = setTimeout(third, 3000);
