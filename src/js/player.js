@@ -127,3 +127,6 @@ function reveal(){
         document.getElementById("nome").style.display = "none"
     }
 }
+function newTab(){
+    window.open("https://hanso667.github.io/RpgWeb/Traits/index.html", '_blank').focus();
+}

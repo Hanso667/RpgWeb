@@ -162,3 +162,4 @@ function third() {
         document.getElementById("trait03").className = "unico"
     }
 }
+
