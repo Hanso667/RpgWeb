@@ -26,7 +26,7 @@ body{
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(rgb(20, 20, 20),rgb(14, 14, 14));
-    height: 30vh;
+    height: 35vh;
     width: 50vh;
     border: 3px solid #7c3737 ;
     border-radius: 0px 0px 40px 40px;
@@ -47,6 +47,11 @@ body{
 }
 .container button:active{
     transform: scale(1.1);
+}
+#voltar{
+    position: absolute;
+    bottom: 27vh;
+    left: 102vh;
 }
 @keyframes entrada{
     0%{

@@ -3,10 +3,8 @@ var Comum = [
     "Ferreiro nato",
     "Alquimista nato",
     "Armadureiro nato",
-    "Espadachim nato",
-    "Machadeiro nato",
-    "Arqueiro nato",
-    "Mago nato",
+    "classe dependente",
+    "Mago Nato",
 ]
 var incomum = [
     "Resistencia a veneno",
